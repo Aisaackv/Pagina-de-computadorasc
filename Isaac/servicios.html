@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Servicios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/favicon.png">
+    <meta name="description" content="Servicios de armado, mantenimiento y redes - TechNova">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">TechNova</a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a class="active" href="servicios.html">Servicios</a></li>
+                    <li><a href="quienes.html">Quienes Somos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <select id="currencySelect" class="currency-select" aria-label="Seleccionar moneda">
+                    <option value="USD">USD $</option>
+                    <option value="MXN">MXN $</option>
+                    <option value="EUR">EUR €</option>
+                    <option value="GBP">GBP £</option>
+                    <option value="JPY">JPY ¥</option>
+                    <option value="CAD">CAD $</option>
+                    <option value="BRL">BRL R$</option>
+                </select>
+                <a class="btn" href="carrito.html"><span class="cart-badge" id="cartCount">0</span> Carrito</a>
+                <a class="btn" id="adminLink" href="admin.html" style="display:none">Admin</a>
+                <a class="btn primary" id="loginLink" href="login.html">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Servicios</h1>
+            <p>Soluciones integrales para tu hogar o empresa.</p>
+        </section>
+
+        <section class="grid three pricing">
+            <article class="card">
+                <h3>Armado de PC</h3>
+                <p>Componentes a tu medida, optimización y pruebas de estrés.</p>
+                <div class="price" data-price-mxn="1499"></div>
+                <ul>
+                    <li>Asesoría de componentes</li>
+                    <li>Instalación de SO</li>
+                    <li>Garantía de 12 meses</li>
+                </ul>
+                <a class="btn primary" href="contacto.html">Solicitar</a>
+            </article>
+            <article class="card popular">
+                <h3>Mantenimiento</h3>
+                <p>Limpieza profunda, cambio de pasta térmica y actualización.</p>
+                <div class="price" data-price-mxn="899"></div>
+                <ul>
+                    <li>Limpieza y diagnóstico</li>
+                    <li>Actualización de drivers</li>
+                    <li>Optimización de rendimiento</li>
+                </ul>
+                <a class="btn primary" href="contacto.html">Agendar</a>
+            </article>
+            <article class="card">
+                <h3>Redes y Seguridad</h3>
+                <p>Instalación de redes, NAS y soluciones de respaldo.</p>
+                <div class="price" data-price-mxn="2999"></div>
+                <ul>
+                    <li>Wi-Fi empresarial</li>
+                    <li>Servidores y almacenamiento</li>
+                    <li>Backups y recuperación</li>
+                </ul>
+                <a class="btn primary" href="contacto.html">Cotizar</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> TechNova. Todos los derechos reservados.</p>
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook">Fb</a></li>
+                <li><a href="#" aria-label="Instagram">Ig</a></li>
+                <li><a href="#" aria-label="X">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+

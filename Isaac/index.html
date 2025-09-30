@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/favicon.png">
+    <meta name="description" content="Venta de computadoras, laptops y accesorios - TechNova">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">TechNova</a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Principal">
+                <ul>
+                    <li><a class="active" href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="quienes.html">Quienes Somos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <select id="currencySelect" class="currency-select" aria-label="Seleccionar moneda">
+                    <option value="USD">USD $</option>
+                    <option value="MXN">MXN $</option>
+                    <option value="EUR">EUR €</option>
+                    <option value="GBP">GBP £</option>
+                    <option value="JPY">JPY ¥</option>
+                    <option value="CAD">CAD $</option>
+                    <option value="BRL">BRL R$</option>
+                </select>
+                <a class="btn" href="carrito.html"><span class="cart-badge" id="cartCount">0</span> Carrito</a>
+                <a class="btn" id="adminLink" href="admin.html" style="display:none">Admin</a>
+                <a class="btn primary" id="loginLink" href="login.html">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Potencia tu mundo digital</h1>
+                <p>Computadoras, laptops y accesorios de alto rendimiento para gamers, creadores y empresas.</p>
+                <a class="btn primary" href="servicios.html">Ver servicios</a>
+            </div>
+        </section>
+
+        <section class="features container">
+            <h2>Productos Destacados</h2>
+            <div class="grid products">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1400&auto=format&fit=crop" alt="PC Gamer RGB" loading="lazy">
+                    <h3>PC Gamer Pro</h3>
+                    <p>Ryzen 7, RTX 4070, 32GB RAM, 1TB SSD NVMe.</p>
+                    <button class="btn add-cart" data-product="PC Gamer Pro" data-price="32999">Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1517059224940-d4af9eec41e5?q=80&w=1400&auto=format&fit=crop" alt="Laptop ultraligera" loading="lazy">
+                    <h3>Laptop Ultra</h3>
+                    <p>Intel i7, 16GB RAM, 512GB SSD, 1.1kg, 14".</p>
+                    <button class="btn add-cart" data-product="Laptop Ultra" data-price="24999">Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1400&auto=format&fit=crop" alt="Monitor 4K" loading="lazy">
+                    <h3>Monitor 4K 27"</h3>
+                    <p>IPS, 144Hz, HDR10, 1ms. Perfecto para gaming y diseño.</p>
+                    <button class="btn add-cart" data-product="Monitor 4K 27&quot;" data-price="8999">Agregar al carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta container">
+            <h2>¿Necesitas asesoría personalizada?</h2>
+            <p>Nuestros expertos te ayudan a elegir la mejor configuración para tu necesidad.</p>
+            <a class="btn outline" href="contacto.html">Hablar con un asesor</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> TechNova. Todos los derechos reservados.</p>
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook">Fb</a></li>
+                <li><a href="#" aria-label="Instagram">Ig</a></li>
+                <li><a href="#" aria-label="X">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+

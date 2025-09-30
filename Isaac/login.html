@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Iniciar Sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/favicon.png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">TechNova</a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="quienes.html">Quienes Somos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="btn" href="carrito.html"><span class="cart-badge" id="cartCount">0</span> Carrito</a>
+                <a class="btn primary" id="loginLink" href="login.html">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Iniciar Sesión</h1>
+            <p>Ingresa para guardar tu carrito y pedidos.</p>
+        </section>
+
+        <form id="loginForm" class="login-form" novalidate>
+            <div class="form-field">
+                <label for="loginName">Nombre</label>
+                <input type="text" id="loginName" required>
+                <small class="error"></small>
+            </div>
+            <div class="form-field">
+                <label for="loginEmail">Correo</label>
+                <input type="email" id="loginEmail" required>
+                <small class="error"></small>
+            </div>
+            <div class="form-field">
+                <label for="loginPassword">Contraseña</label>
+                <div class="password-wrap">
+                    <input type="password" id="loginPassword" required minlength="6">
+                    <button type="button" class="toggle-password" id="togglePwd" aria-label="Mostrar u ocultar contraseña">👁</button>
+                </div>
+                <div class="pwd-meter" aria-hidden="true">
+                    <div class="pwd-meter-bar" id="pwdBar"></div>
+                </div>
+                <small id="pwdLabel" class="pwd-label"></small>
+                <small class="error"></small>
+            </div>
+            <button class="btn primary" type="submit">Entrar</button>
+            <p id="loginStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> TechNova. Todos los derechos reservados.</p>
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook">Fb</a></li>
+                <li><a href="#" aria-label="Instagram">Ig</a></li>
+                <li><a href="#" aria-label="X">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+
