@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/favicon.png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">TechNova</a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="quienes.html">Quienes Somos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <select id="currencySelect" class="currency-select" aria-label="Seleccionar moneda">
+                    <option value="USD">USD $</option>
+                    <option value="MXN">MXN $</option>
+                    <option value="EUR">EUR €</option>
+                </select>
+                <a class="btn" href="carrito.html"><span class="cart-badge" id="cartCount">0</span> Carrito</a>
+                <a class="btn" id="adminLink" href="admin.html" style="display:none">Admin</a>
+                <a class="btn primary" id="loginLink" href="login.html">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Panel de Administración</h1>
+            <p id="adminStatus">Cargando...</p>
+        </section>
+
+        <section class="admin-grid">
+            <article class="card">
+                <h3>Usuarios</h3>
+                <table class="admin-table" id="usersTable">
+                    <thead><tr><th>Nombre</th><th>Email</th><th>Rol</th><th>Tipo</th><th>Acciones</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </article>
+            <article class="card">
+                <h3>Pedidos</h3>
+                <table class="admin-table" id="ordersTable">
+                    <thead><tr><th>ID</th><th>Fecha</th><th>Estado</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </article>
+            <article class="card">
+                <h3>Moneda y Tasa</h3>
+                <div class="admin-controls">
+                    <label for="rateUSD">MXN por 1 USD</label>
+                    <input type="number" id="rateUSD" step="0.01" min="0" value="18">
+                    <label for="defaultCurrency">Moneda por defecto</label>
+                    <select id="defaultCurrency" class="currency-select">
+                        <option value="USD">USD</option>
+                        <option value="MXN">MXN</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                    <button class="btn" id="saveRate">Guardar</button>
+                </div>
+                <p class="form-status" id="fxStatus"></p>
+            </article>
+            <article class="card">
+                <h3>Origen de envíos</h3>
+                <p>¿Deseas mostrar tu dirección para envíos? Por defecto saldrán desde Quito, Ecuador.</p>
+                <div class="form-field">
+                    <label><input type="checkbox" id="showAddress"> Mostrar mi dirección en pedidos</label>
+                </div>
+                <div class="form-field">
+                    <label for="originCountry">País</label>
+                    <select id="originCountry">
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="México">México</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Perú">Perú</option>
+                        <option value="España">España</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Brasil">Brasil</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="originProvince">Provincia/Estado</label>
+                    <input type="text" id="originProvince" placeholder="Pichincha">
+                </div>
+                <button class="btn" id="saveShipping">Guardar configuración de envíos</button>
+                <p class="form-status" id="shipStatus"></p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> TechNova. Todos los derechos reservados.</p>
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook">Fb</a></li>
+                <li><a href="#" aria-label="Instagram">Ig</a></li>
+                <li><a href="#" aria-label="X">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+

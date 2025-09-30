@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Rastreo de Pedido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+    <link rel="icon" href="assets/img/favicon.png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">TechNova</a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="quienes.html">Quienes Somos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <select id="currencySelect" class="currency-select" aria-label="Seleccionar moneda">
+                    <option value="USD">USD $</option>
+                    <option value="MXN">MXN $</option>
+                    <option value="EUR">EUR €</option>
+                    <option value="GBP">GBP £</option>
+                    <option value="JPY">JPY ¥</option>
+                    <option value="CAD">CAD $</option>
+                    <option value="BRL">BRL R$</option>
+                </select>
+                <a class="btn" href="carrito.html"><span class="cart-badge" id="cartCount">0</span> Carrito</a>
+                <a class="btn" id="adminLink" href="admin.html" style="display:none">Admin</a>
+                <a class="btn primary" id="loginLink" href="login.html">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Rastreo de Pedido</h1>
+            <p id="trackingInfo">Buscando pedido activo...</p>
+        </section>
+
+        <div id="map" class="map"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> TechNova. Todos los derechos reservados.</p>
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook">Fb</a></li>
+                <li><a href="#" aria-label="Instagram">Ig</a></li>
+                <li><a href="#" aria-label="X">X</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+
